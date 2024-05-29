@@ -1,0 +1,59 @@
+﻿@model AgenciaViajes.Models.Vuelo
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Fecha de inicio
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class = "col-sm-2">
+            Fecha final
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+        <dt class = "col-sm-2">
+            Precio
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioV)
+        </dd>
+        <dt class = "col-sm-2">
+            Estado
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadoNavigation.Estado1)
+        </dd>
+        <dt class = "col-sm-2">
+            Aerolínea
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAerolineaNavigation.Aerolinea1)
+        </dd>
+        <dt class = "col-sm-2">
+            Aeropuerto destino
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAeropuertoDestinoNavigation.Aeropuerto)
+        </dd>
+        <dt class = "col-sm-2">
+            Aeropuerto origen
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAeropuertoOrigenNavigation.Aeropuerto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdVuelo">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

@@ -1,0 +1,62 @@
+﻿@model AgenciaViajes.Models.Vuelo
+
+@{
+    ViewData["Title"] = "Deshabilitar";
+}
+
+<h1>Deshabilitar</h1>
+
+<h3>¿Seguro que deseas deshabilitar?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Fecha de salida
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class = "col-sm-2">
+            Fecha de llegada
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+        <dt class = "col-sm-2">
+            Precio
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioV)
+        </dd>
+        <dt class = "col-sm-2">
+            Estado
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadoNavigation.Estado1)
+        </dd>
+        <dt class = "col-sm-2">
+            Aerolinea
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAerolineaNavigation.Aerolinea1)
+        </dd>
+        <dt class = "col-sm-2">
+            Aeropuerto destino
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAeropuertoDestinoNavigation.Aeropuerto)
+        </dd>
+        <dt class = "col-sm-2">
+            Aeropuerto origen
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAeropuertoOrigenNavigation.Aeropuerto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdVuelo" />
+        <input type="submit" value="Deshabilitar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>

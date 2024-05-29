@@ -1,0 +1,158 @@
+﻿@model AgenciaViajes.Models.Vuelo
+
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<h1>Agregar vuelo</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdAerolinea" class="control-label">Aerolínea</label>
+                <select asp-for="IdAerolinea" class="form-control" asp-items="ViewBag.IdAerolinea">
+                    <option value="">Seleccionar...</option> <!-- Opción nula (null) -->
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaInicio" class="control-label">Fecha de salida</label>
+                <input asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaFinal" class="control-label">Fecha de llegada</label>
+                <input asp-for="FechaFinal" class="form-control" />
+                <span asp-validation-for="FechaFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">País de Origen</label>
+                <select id="PaisSelect" class="form-control" asp-items="ViewBag.PaisOrigen">
+                    <option value="">Seleccione una opción...</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Provincia de Origen</label>
+                <select id="ProvinciaSelect" class="form-control" asp-items="ViewBag.ProvinciaOrigen">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdAeropuertoOrigen" class="control-label">Aeropuerto</label>
+                <select id="AeropuertoOrigenSelect" asp-for="IdAeropuertoOrigen" class="form-control" asp-items="ViewBag.IdAeropuertoOrigen"></select>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">País de Destino</label>
+                <select id="PaisSelect1" class="form-control" asp-items="ViewBag.PaisDestino">
+                    <option value="">Seleccione una opción...</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Provincia de Destino</label>
+                <select id="ProvinciaSelect1" class="form-control" asp-items="ViewBag.ProvinciaDestino">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IdAeropuertoDestino" class="control-label">Aeropuerto destino</label>
+                <select id="AeropuertoDestinoSelect" asp-for="IdAeropuertoDestino" class="form-control" asp-items="ViewBag.IdAeropuertoDestino"></select>
+                <span asp-validation-for="IdAeropuertoDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioV" class="control-label">Precio</label>
+                <input asp-for="PrecioV" class="form-control" type="text" />
+                <span asp-validation-for="PrecioV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $("#ProvinciaSelect").empty();
+        $(document).ready(function () {
+            $("#PaisSelect").change(function () {
+                var selectedPais = $("#PaisSelect").val();
+                $("#ProvinciaSelect").empty(); // Limpia el select de provincias
+
+                // Realiza una solicitud AJAX al servidor para obtener las provincias correspondientes al país seleccionado
+                $.get("/Vueloes/GetProvincias", { pais: selectedPais }, function (data) {
+                    $("#ProvinciaSelect").append($('<option></option>').val(" ").html("Seleccione una opcion..."));
+                    $.each(data, function (key, value) {
+
+                        $("#ProvinciaSelect").append($('<option></option>').val(value).html(value));
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#AeropuertoOrigenSelect').empty();
+            $("#PaisSelect, #ProvinciaSelect").change(function () {
+                var selectedPais = $("#PaisSelect").val();
+                var selectedProvincia = $("#ProvinciaSelect").val();
+                $("#AeropuertoOrigenSelect").empty(); // Limpia el select de aeropuertos
+
+                // Realiza una solicitud AJAX al servidor para obtener los aeropuertos correspondientes al país y provincia seleccionados
+                $.get("/Vueloes/GetAeropuertos", { provincia: selectedProvincia }, function (data) {
+                    $.each(data, function (key, value) {
+                        $("#AeropuertoOrigenSelect").append($('<option></option>').val(value.value).html(value.text));
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        $("#ProvinciaSelect1").empty();
+        $(document).ready(function () {
+            $("#PaisSelect1").change(function () {
+                var selectedPais = $("#PaisSelect1").val();
+                $("#ProvinciaSelect1").empty(); // Limpia el select de provincias
+
+                // Realiza una solicitud AJAX al servidor para obtener las provincias correspondientes al país seleccionado
+                $.get("/Vueloes/GetProvincias", { pais: selectedPais }, function (data) {
+                    $("#ProvinciaSelect1").append($('<option></option>').val(" ").html("Seleccione una opcion..."));
+                    $.each(data, function (key, value) {
+
+                        $("#ProvinciaSelect1").append($('<option></option>').val(value).html(value));
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#AeropuertoDestinoSelect').empty();
+
+            $("#PaisSelect1, #ProvinciaSelect1").change(function () {
+
+                var selectedProvincia = $("#ProvinciaSelect1").val();
+                $("#AeropuertoDestinoSelect").empty(); // Limpia el select de aeropuertos
+
+                // Realiza una solicitud AJAX al servidor para obtener los aeropuertos correspondientes al país y provincia seleccionados
+                $.get("/Vueloes/GetAeropuertos", { provincia: selectedProvincia }, function (data) {
+                    $.each(data, function (key, value) {
+                        $("#AeropuertoDestinoSelect").append($('<option></option>').val(value.value).html(value.text));
+                    });
+                });
+            });
+        });
+    </script>
+}

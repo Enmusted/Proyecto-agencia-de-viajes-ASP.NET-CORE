@@ -1,0 +1,86 @@
+﻿@model AgenciaViajes.Models.Tour
+
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Agregar tour</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripción" class="control-label">Descripción</label>
+                <input asp-for="Descripción" class="form-control" />
+                <span asp-validation-for="Descripción" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreTour" class="control-label">Nombre</label>
+                <input asp-for="NombreTour" class="form-control" />
+                <span asp-validation-for="NombreTour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destinos" class="control-label"></label>
+                <input asp-for="Destinos" class="form-control" />
+                <span asp-validation-for="Destinos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">País</label>
+                <select id="PaisSelect" class="form-control" asp-items="ViewBag.PaisOrigen">
+                    <option value="">Seleccione una opción...</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+
+                <input id="Paislabel" type="hidden" asp-for="Pais" class="form-control" />
+                <span asp-validation-for="Pais" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaInicio" class="control-label">Fecha de inicio</label>
+                <input asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaFin" class="control-label">Fecha de fin</label>
+                <input asp-for="FechaFin" class="form-control" />
+                <span asp-validation-for="FechaFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatosImagen" class="control-label">Imagen tour</label>
+
+                @Html.LabelFor(model => model.DatosImagen, "Imagen", new { @class = "control-label" })
+                <input type="file" name="imagen" required />
+            </div>
+            <div class="form-group">
+                <label asp-for="Capacidad" class="control-label"></label>
+                <input asp-for="Capacidad" class="form-control" />
+                <span asp-validation-for="Capacidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $("#PaisSelect").change(function () {
+            var selectedPais = $("#PaisSelect").val();
+            $('#Paislabel').val(selectedPais);
+        });
+    </script>
+}

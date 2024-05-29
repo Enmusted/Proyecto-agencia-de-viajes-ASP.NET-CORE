@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AgenciaViajes.Models.Detallecompra>
+
+
+@{
+    Layout = "_Layoutvendedor";
+}
+
+<h1>Generar compra</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Fecha de compra
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                DNI
+            </th>
+            <th>
+                Tour
+            </th>
+            <th>
+                Reserva vuelo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DniNavigation.Dni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProductoNavigation.NombreTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRvueloNavigation.IdRvuelo)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.NumeroVenta">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.NumeroVenta">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

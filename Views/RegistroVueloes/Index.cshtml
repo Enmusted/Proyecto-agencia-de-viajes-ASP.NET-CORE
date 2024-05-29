@@ -1,0 +1,86 @@
+﻿@model IEnumerable<AgenciaViajes.Models.RegistroVuelo>
+
+@{
+    Layout = "_Layoutvendedor";
+}
+
+<h1>Reserva de asientos-vuelos</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                DNI
+            </th>
+            <th>
+                Aeropuerto origen
+            </th>
+            <th>
+                Fecha salida
+            </th>
+            <th>
+                Aeropuerto destino
+            </th>
+            <th>
+                Fecha llegada
+            </th>
+            <th>
+                Asiento
+            </th>
+            <th>
+                Total
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                ID vuelo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DniNavigation.Dni)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdVueloNavigation.IdAeropuertoOrigenNavigation.Aeropuerto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdVueloNavigation.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdVueloNavigation.IdAeropuertoDestinoNavigation.Aeropuerto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdVueloNavigation.FechaFinal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdAsientoNavigation.NumAsiento)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioT)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoNavigation.Estado1)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.IdVueloNavigation.IdVuelo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdRvuelo">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdRvuelo">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdRvuelo">Deshabilitar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AgenciaViajes.Models.Hotel>
+
+@{
+    ViewData["Title"] = "Hoteles";
+}
+
+<h1>Hoteles</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Provincia)
+            </th>
+            <th>
+                Dirección
+            </th>
+            <th>
+                Estado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provincia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoNavigation.Estado1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdHotel">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdHotel">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdHotel">Deshabilitar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,289 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AgenciaViajes
+build_property.RootNamespace = AgenciaViajes
+build_property.ProjectDir = C:\Users\HP\Desktop\AGENCIA DE VIAJES FINAL\AgenciaViajes\AgenciaViajes\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\HP\Desktop\AGENCIA DE VIAJES FINAL\AgenciaViajes\AgenciaViajes
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aerolineas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb2xpbmVhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aerolineas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb2xpbmVhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aerolineas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb2xpbmVhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aerolineas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb2xpbmVhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aerolineas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb2xpbmVhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aeropuerts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3B1ZXJ0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aeropuerts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3B1ZXJ0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aeropuerts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3B1ZXJ0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aeropuerts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3B1ZXJ0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Aeropuerts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3B1ZXJ0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Detallecompras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZWNvbXByYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Detallecompras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZWNvbXByYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Detallecompras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZWNvbXByYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Detallecompras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZWNvbXByYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Detallecompras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZWNvbXByYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/Indexvendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleHZlbmRlZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/UsuarioLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc3VhcmlvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/VendedorLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZW5kZWRvckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Home/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Hotels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Hotels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Hotels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Hotels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Hotels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/RegistroVueloes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9WdWVsb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/RegistroVueloes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9WdWVsb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/RegistroVueloes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9WdWVsb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/RegistroVueloes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9WdWVsb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/RegistroVueloes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9WdWVsb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/ReservaHotels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YUhvdGVsc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/ReservaHotels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YUhvdGVsc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/ReservaHotels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YUhvdGVsc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/ReservaHotels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YUhvdGVsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/ReservaHotels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YUhvdGVsc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Thabitacions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhYml0YWNpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Thabitacions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhYml0YWNpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Thabitacions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhYml0YWNpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Thabitacions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhYml0YWNpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Thabitacions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhYml0YWNpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Tours/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Tours/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Tours/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Tours/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Tours/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vendedors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vendedors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vendedors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vendedors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vendedors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vueloes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vueloes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vueloes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vueloes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Vueloes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-3zq5ihnt81
+
+[C:/Users/HP/Desktop/AGENCIA DE VIAJES FINAL/AgenciaViajes/AgenciaViajes/Views/Shared/_Layoutvendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXR2ZW5kZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ztsjnrfj10

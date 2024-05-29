@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Usuario Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgenciaViajes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AgenciaViajes.styles.css" asp-append-version="true" />
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        max-width: 300px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1 class="text-center">Inicio de sesión</h1>
+    <form method="post" asp-action="UsuarioLogin">
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" required />
+        <br />
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" required />
+        <br />
+        <button type="submit" class="btn btn-success">Iniciar sesión</button>
+    </form>
+</body>
+</html>

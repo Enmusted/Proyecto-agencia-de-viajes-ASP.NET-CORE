@@ -1,0 +1,136 @@
+﻿@model AgenciaViajes.Models.Detallecompra
+
+
+@{
+    Layout = "_Layoutvendedor";
+}
+
+<h1>Editar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NumeroVenta" />
+            <div class="form-group">
+                <label asp-for="Dni" class="control-label">DNI</label>
+                <select asp-for="Dni" class="form-control" asp-items="ViewBag.Dni"></select>
+                <span asp-validation-for="Dni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdRvuelo" class="control-label">Reserva vuelo</label>
+                <select asp-for="IdRvuelo" class="form-control" asp-items="ViewBag.IdRvuelo" id="IdRvueloSelect"></select>
+                <span asp-validation-for="IdRvuelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProducto" class="control-label">Tour</label>
+                <select asp-for="IdProducto" class="form-control" asp-items="ViewBag.IdProducto" id="IdProductoSelect">
+                    <option value="">Seleccionar...</option> <!-- Opción nula (null) -->
+                </select>
+                <span asp-validation-for="IdProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TarjetaCredito" class="control-label">Número de tarjeta</label>
+                <input asp-for="TarjetaCredito" class="form-control" />
+                <span asp-validation-for="TarjetaCredito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TVencimiento" class="control-label">Fecha de vencimiento</label>
+                <input asp-for="TVencimiento" class="form-control" />
+                <span asp-validation-for="TVencimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cvv" class="control-label">CVV</label>
+                <input asp-for="Cvv" class="form-control" />
+                <span asp-validation-for="Cvv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaCompra" class="control-label">Fecha de compra</label>
+                <input asp-for="FechaCompra" class="form-control" />
+                <span asp-validation-for="FechaCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total" class="control-label"></label>
+                <input asp-for="Total" class="form-control" readonly id="Total" />
+                <span asp-validation-for="Total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $("#IdPrhSelect").empty();
+        $("#IdRvueloSelect").empty();
+        $(document).ready(function () {
+            $("#DniSelect").change(function () {
+                var selectedDni = $("#DniSelect").val();
+                $("#IdPrhSelect").empty();
+                $("#IdPrhSelect").append($('<option></option>').val("").html("Seleccione una opción..."));
+                // Realiza una solicitud AJAX al servidor para obtener las provincias correspondientes al país seleccionado
+                $.get("/Detallecompras/GetIdPrH", { dni: selectedDni }, function (data) {
+
+                    $.each(data, function (key, value) {
+
+                        $("#IdPrhSelect").append($('<option></option>').val(value.value).html(value.text));
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#DniSelect").change(function () {
+                var selectedDni = $("#DniSelect").val();
+                $("#IdRvueloSelect").empty();
+                $("#IdRvueloSelect").append($('<option></option>').val(" ").html("Selecciona una opción..."));
+                // Realiza una solicitud AJAX al servidor para obtener las provincias correspondientes al país seleccionado
+                $.get("/Detallecompras/GetIdRvuelo", { dni: selectedDni }, function (data) {
+
+                    $.each(data, function (key, value) {
+
+                        $("#IdRvueloSelect").append($('<option></option>').val(value.value).html(value.text));
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        $("#IdPrhSelect,#IdRvueloSelect,#IdProductoSelect").change(function () {
+            var selectedIdPrh = $("#IdPrhSelect").val();
+            var selectedIdRvuelo = $("#IdRvueloSelect").val();
+            var selectedIdProducto = $("#IdProductoSelect").val();
+            $.get("/Detallecompras/GetPrecioRh", { id: selectedIdPrh }, function (data) {
+                precioIdPrh = data
+                $.get("/Detallecompras/GetPrecioAsiento", { id: selectedIdRvuelo }, function (data2) {
+
+                    precioIdRvuelo = data2;
+                    $.get("/Detallecompras/GetPrecioTour", { id: selectedIdProducto }, function (data3) {
+
+                        precioIdProducto = data3;
+                        total = precioIdPrh + precioIdRvuelo + precioIdProducto;
+                        $('#Total').val(total);
+                    });
+                });
+
+            });
+        });
+
+
+    </script>
+
+}
+
+
+

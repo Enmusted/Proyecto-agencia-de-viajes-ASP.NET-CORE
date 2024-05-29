@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AgenciaViajes.Models.Usuario>
+
+
+@{
+    Layout = "_Layoutvendedor";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                DNI
+            </th>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Fecha de Nacimiento
+            </th>
+            <th>
+                Estado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+                <td>
+                    @{
+                        var fechaNacimientoFormatted = item.FechaNacimiento.ToString("dd/MM/yyyy");
+                    }
+                    @fechaNacimientoFormatted
+                </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoNavigation.Estado1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Dni">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Dni">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Dni">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

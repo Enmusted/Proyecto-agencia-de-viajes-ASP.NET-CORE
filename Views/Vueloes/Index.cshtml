@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AgenciaViajes.Models.Vuelo>
+
+@{
+    ViewData["Title"] = "Vuelos";
+}
+
+<h1>Vuelos</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Fecha salida
+            </th>
+            <th>
+                Fecha llegada
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Aerolínea
+            </th>
+            <th>
+                Aeropuerto destino
+            </th>
+            <th>
+               Aeropuerto origen
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoNavigation.Estado1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAerolineaNavigation.Aerolinea1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAeropuertoDestinoNavigation.Aeropuerto)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.IdAeropuertoOrigenNavigation.Aeropuerto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVuelo">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVuelo">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVuelo">Deshabilitar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

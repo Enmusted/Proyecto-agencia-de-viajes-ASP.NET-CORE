@@ -1,0 +1,33 @@
+﻿@model AgenciaViajes.Models.Aerolinea
+
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<h1>Agregar</h1>
+
+<h4>Aerolinea</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Aerolinea1" class="control-label">Nombre de Aerolinea</label>
+                <input asp-for="Aerolinea1" class="form-control" />
+                <span asp-validation-for="Aerolinea1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

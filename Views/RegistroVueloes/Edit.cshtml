@@ -1,0 +1,123 @@
+﻿@model AgenciaViajes.Models.RegistroVuelo
+
+@{
+    Layout = "_Layoutvendedor";
+}
+
+<h1>Editar</h1>
+
+<h1>Reservar asiento de vuelo</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdRvuelo" />
+            <div class="form-group">
+                <label asp-for="PrecioT" class="control-label">Total</label>
+                <input asp-for="PrecioT" class="form-control" readonly id="Total" />
+                <span asp-validation-for="PrecioT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdVuelo" class="control-label">Vuelo</label>
+                <select asp-for="IdVuelo" class="form-control" asp-items="ViewBag.IdVuelo" id="VueloSelect"></select>
+                <span asp-validation-for="IdVuelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Clase</label>
+                <select id="ClaseSelect" class="form-control" asp-items="ViewBag.Clase">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdAsiento" class="control-label">Asiento</label>
+                <select asp-for="IdAsiento" class="form-control" asp-items="ViewBag.IdAsiento" id="AsientoSelect"></select>
+                <span asp-validation-for="IdAsiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dni" class="control-label">DNI</label>
+                <input asp-for="Dni" class="form-control" readonly>
+                <span asp-validation-for="Dni" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" readonly>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $("#ClaseSelect").empty();
+        $("#ClaseSelect").append($('<option></option>').val("").html("Seleccione una opción..."));
+        $("#ClaseSelect").append($('<option></option>').val("Clase Ejecutiva ").html("Clase Ejecutiva"));
+        $("#ClaseSelect").append($('<option></option>').val("Premium").html("Premium"));
+        $("#ClaseSelect").append($('<option></option>').val("Favorable").html("Favorable"));
+        $("#ClaseSelect").append($('<option></option>').val("Salida de Emergencia").html("Salida de Emergencia"));
+        $("#ClaseSelect").append($('<option></option>').val("Regular").html("Regular"));
+        $("#AsientoSelect").empty();
+        $(document).ready(function () {
+            $("#ClaseSelect").change(function () {
+                var selectedClase = $("#ClaseSelect").val();
+                var selectedVuelo = $("#VueloSelect").val();
+                $("#AsientoSelect").empty(); // Limpia el select de provincias
+
+                if (selectedVuelo) { // Asegúrate de que se haya seleccionado un IdVuelo
+                    // Realiza una solicitud AJAX al servidor para obtener los asientos basados en la clase y el IdVuelo seleccionados
+                    $.get("/RegistroVueloes/GetAsientos", { clase: selectedClase, idVuelo: selectedVuelo }, function (data) {
+                        $("#AsientoSelect").append($('<option></option>').val(" ").html("Seleccione una opcion..."));
+                        $.each(data, function (key, value) {
+                            $("#AsientoSelect").append($('<option></option>').val(value.value).html(value.text));
+                        });
+                    });
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        $("#AsientoSelect").change(function () {
+            var selectedAsiento = $("#AsientoSelect").val();
+            var selectedVuelo = $("#VueloSelect").val();
+            $.get("/RegistroVueloes/GetPrecio", { asiento: selectedAsiento }, function (data) {
+                precioasiento = data
+                $.get("/RegistroVueloes/GetPrecioVuelo", { id: selectedVuelo }, function (data2) {
+
+                    preciovuelo = data2;
+                    total = data2 + data * 2;
+                    $('#Total').val(total);
+                });
+
+            });
+        });
+    </script>
+}
+    <script>
+        $("#AsientoSelect").change(function () {
+            var selectedAsiento = $("#AsientoSelect").val();
+            var selectedVuelo = $("#VueloSelect").val();
+            $.get("/RegistroVueloes/GetPrecio", { asiento: selectedAsiento }, function (data) {
+                precioasiento = data
+                $.get("/RegistroVueloes/GetPrecioVuelo", { id: selectedVuelo }, function (data2) {
+
+                    preciovuelo = data2;
+                    total = data2 + data * 2;
+                    $('#Total').val(total);
+                });
+
+            });
+        });
+    </script>

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgenciaViajes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AgenciaViajes.styles.css" asp-append-version="true" />
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+       
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+    
+        .btn-group {
+           
+            margin-bottom: 10px; 
+          
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Bienvenido</h1>
+        <div class="btn-group">
+            <a asp-controller="Home" asp-action="Login"><button class="btn btn-primary btn-block">Administrador</button></a>
+        </div>
+        <div class="btn-group">
+            <a asp-controller="Home" asp-action="VendedorLogin"><button class="btn btn-success btn-block">Vendedor</button></a>
+        </div>
+    </div>
+</body>
+</html>

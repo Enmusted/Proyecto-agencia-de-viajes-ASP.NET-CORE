@@ -1,0 +1,127 @@
+﻿@model AgenciaViajes.Models.ReservaHotel
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>ReservaHotel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPrh" />
+            <div class="form-group">
+                <label asp-for="Dni" class="control-label">DNI</label>
+                <select asp-for="Dni" class="form-control" asp-items="ViewBag.Dni"></select>
+                <span asp-validation-for="Dni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdHotel" class="control-label">Hotel</label>
+                <select asp-for="IdHotel" class="form-control" asp-items="ViewBag.IdHotel" id="IdHotelSelect">
+                    <option value="">Seleccione una opción...</option>
+                </select>
+                <span asp-validation-for="IdHotel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProductoTh" class="control-label">Habitación</label>
+                <select asp-for="IdProductoTh" class="form-control" asp-items="ViewBag.IdProductoTh" id="IdProductoThSelect"></select>
+                <span asp-validation-for="IdProductoTh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaEntrada" class="control-label">Fecha entrada</label>
+                <input asp-for="FechaEntrada" class="form-control" id="FechaEntrada" />
+                <span asp-validation-for="FechaEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaSalida" class="control-label">Fecha salida</label>
+                <input asp-for="FechaSalida" class="form-control" id="FechaSalida" />
+                <span asp-validation-for="FechaSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total" class="control-label"></label>
+                <input asp-for="Total" class="form-control" readonly id="Total" />
+                <span asp-validation-for="Total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="form-control" asp-items="ViewBag.Estado"></select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Cuando cambie la selección de IdHotel
+        $('#IdProductoThSelect').empty();
+        $('#IdHotelSelect').change(function () {
+            var selectedHotelId = $(this).val();
+            if (selectedHotelId) {
+                // Realiza una solicitud AJAX para cargar los elementos correspondientes de IdProductoTh
+                $.ajax({
+                    url: '@Url.Action("GetProductoThByHotel", "ReservaHotels")',
+                    type: 'GET',
+                    data: { idHotel: selectedHotelId },
+                    success: function (data) {
+                        // Actualiza la lista desplegable de IdProductoTh
+                        $('#IdProductoThSelect').empty();
+                        $.each(data, function (i, item) {
+                            $('#IdProductoThSelect').append($('<option>').val(item.value).text(item.text));
+                        });
+                    }
+                });
+            }
+            else {
+                // Si no se ha seleccionado un valor en IdHotel, deja la lista desplegable de IdProductoTh vacía
+                $('#IdProductoThSelect').empty();
+                $('#IdProductoThSelect').append($('<option value="">Seleccione una opción...</option>'));
+            }
+        });
+    </script>
+    <script>
+        // Cuando cambien las fechas FechaEntrada o FechaSalida
+        $('#FechaEntrada, #FechaSalida').change(function () {
+            var fechaEntrada = $('#FechaEntrada').val();
+            var fechaSalida = $('#FechaSalida').val();
+
+            if (fechaEntrada && fechaSalida) {
+                // Convierte las fechas a objetos Date
+                var fechaEntradaObj = new Date(fechaEntrada);
+                var fechaSalidaObj = new Date(fechaSalida);
+
+                // Calcula la diferencia en días
+                var diferenciaDias = (fechaSalidaObj - fechaEntradaObj) / (1000 * 60 * 60 * 24);
+
+                // Obtiene el valor de Precio usando una solicitud AJAX basada en IdProductoTh
+                var idProductoTh = $('#IdProductoThSelect').val();
+
+                if (idProductoTh) {
+                    $.ajax({
+                        url: '@Url.Action("GetPrecioByIdProductoTh", "ReservaHotels")',
+                        type: 'GET',
+                        data: { idProductoTh: idProductoTh },
+                        success: function (precio) {
+                            // Calcula el Total y muestra el resultado
+                            var total = precio * diferenciaDias;
+                            $('#Total').val(total);
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+}

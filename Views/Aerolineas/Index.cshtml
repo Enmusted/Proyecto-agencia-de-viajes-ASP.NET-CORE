@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AgenciaViajes.Models.Aerolinea>
+
+@{
+    ViewData["Title"] = "Aerolínea";
+}
+
+<h1>Aerolínea</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Aerolínea
+            </th>
+            <th>
+                Estado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aerolinea1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoNavigation.Estado1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdAerolinea">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAerolinea">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAerolinea">Deshabilitar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
